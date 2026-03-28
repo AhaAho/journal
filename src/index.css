@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Noto Serif", serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-primary: #885202;
+  --color-primary-container: #c8873a;
+  --color-on-primary: #ffffff;
+  
+  --color-background: #fbf9f6;
+  --color-surface: #fbf9f6;
+  --color-surface-container-low: #f5f3f0;
+  --color-surface-container-high: #eae8e5;
+  --color-surface-container-highest: #e4e2df;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-surface: #1b1c1a;
+  --color-on-surface-variant: #514438;
+  --color-outline-variant: #d6c3b2;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body antialiased;
+  }
+}
+
+.writing-canvas-gradient {
+  background: linear-gradient(135deg, #885202 0%, #c8873a 100%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d6c3b2;
+  border-radius: 10px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
